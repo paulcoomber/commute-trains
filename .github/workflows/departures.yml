@@ -1,0 +1,54 @@
+name: Departures
+
+# GitHub cron is UTC only. These windows cover the commute in both GMT and BST:
+#   05:02-08:57 UTC  -> morning summary (06:29) and live checks (07:00-08:30)
+#   15:02-19:57 UTC  -> evening summary (16:29) and live checks (17:30-19:30)
+# Offset from :00 because GitHub delays top-of-the-hour runs the most.
+on:
+  schedule:
+    - cron: "2-59/5 5-8 * * 1-5"
+    - cron: "2-59/5 15-19 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: departures
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch departures
+        id: fetch
+        env:
+          RDM_API_KEY: ${{ secrets.RDM_API_KEY }}
+          RDM_BOARD_URL: ${{ vars.RDM_BOARD_URL }}
+          OUT: ${{ runner.temp }}/departures.json
+        run: |
+          set +e
+          python3 scripts/fetch_departures.py
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+
+      # Always publish, even on failure, so readers see a fresh error rather than stale trains.
+      - name: Publish to data branch
+        if: always()
+        run: |
+          cd "$RUNNER_TEMP"
+          [ -f departures.json ] || { echo "No output to publish"; exit 0; }
+          mkdir pub && cp departures.json pub/ && cd pub
+          git init -q -b data
+          git config user.name "commute-bot"
+          git config user.email "commute-bot@users.noreply.github.com"
+          git add departures.json
+          git commit -qm "Departures $(date -u +%FT%TZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data
+
+      - name: Fail if both directions failed
+        if: steps.fetch.outputs.status != '0'
+        run: exit 1
