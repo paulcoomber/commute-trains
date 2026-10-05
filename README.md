@@ -2,9 +2,10 @@
 
 Fetches live High Brooms <-> London Bridge departures from the Rail Data Marketplace on weekday commute windows and publishes them as `departures.json` on the `data` branch.
 
-Readers (Claude scheduled tasks, the Daily Commute board) fetch:
+Readers (Claude scheduled tasks) fetch it by commit, because the CDN caches the branch URL for ~5 minutes and ignores query-string cache busting:
 
-    https://raw.githubusercontent.com/<owner>/commute-trains/data/departures.json
+    SHA=$(git ls-remote https://github.com/paulcoomber/commute-trains refs/heads/data | cut -f1)
+    curl -sf "https://raw.githubusercontent.com/paulcoomber/commute-trains/$SHA/departures.json"
 
 ## Setup
 
