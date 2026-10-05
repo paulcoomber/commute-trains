@@ -8,8 +8,10 @@ Environment:
                  https://api1.raildata.org.uk/1010-live-arrival-and-departure-boards-arr-and-dep1_1/LDBWS/api/20220120/GetArrDepBoardWithDetails
   OUT            output path (default departures.json)
 """
+import html
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -89,7 +91,8 @@ def board(base, key, frm, to):
     for m in get(data, "nrccMessages", default=[]) or []:
         text = get(m, "value", "Value") if isinstance(m, dict) else m
         if text:
-            msgs.append(" ".join(str(text).split()))
+            plain = html.unescape(re.sub(r"<[^>]+>", " ", str(text)))
+            msgs.append(" ".join(plain.split()))
 
     return {"from": frm, "to": to, "ok": True,
             "generatedAt": get(data, "generatedAt") or now_iso(),
