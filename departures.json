@@ -1,0 +1,145 @@
+{
+ "fetchedAt": "2026-10-09T19:58:54Z",
+ "source": "Rail Data Marketplace (Darwin LDBWS)",
+ "boards": {
+  "HIB-LBG": {
+   "from": "HIB",
+   "to": "LBG",
+   "ok": true,
+   "generatedAt": "2026-10-09T20:58:54.6000401+01:00",
+   "messages": [],
+   "trains": [
+    {
+     "std": "21:23",
+     "etd": "On time",
+     "platform": "1",
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:05",
+     "eta": "On time"
+    },
+    {
+     "std": "21:43",
+     "etd": "On time",
+     "platform": null,
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:23",
+     "eta": "On time"
+    },
+    {
+     "std": "22:09",
+     "etd": "On time",
+     "platform": null,
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:55",
+     "eta": "On time"
+    },
+    {
+     "std": "22:43",
+     "etd": "On time",
+     "platform": null,
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:23",
+     "eta": "On time"
+    }
+   ]
+  },
+  "LBG-HIB": {
+   "from": "LBG",
+   "to": "HIB",
+   "ok": true,
+   "generatedAt": "2026-10-09T20:58:55.0112861+01:00",
+   "messages": [],
+   "trains": [
+    {
+     "std": "21:06",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "21:53",
+     "eta": "On time"
+    },
+    {
+     "std": "21:24",
+     "etd": "On time",
+     "platform": "6",
+     "dest": "Hastings",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:04",
+     "eta": "On time"
+    },
+    {
+     "std": "21:36",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:18",
+     "eta": "On time"
+    },
+    {
+     "std": "21:54",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Hastings",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:35",
+     "eta": "On time"
+    },
+    {
+     "std": "22:06",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "22:49",
+     "eta": "On time"
+    },
+    {
+     "std": "22:36",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:18",
+     "eta": "On time"
+    },
+    {
+     "std": "22:54",
+     "etd": "On time",
+     "platform": null,
+     "dest": "Hastings",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:35",
+     "eta": "On time"
+    }
+   ]
+  }
+ }
+}
