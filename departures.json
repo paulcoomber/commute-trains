@@ -1,0 +1,92 @@
+{
+ "fetchedAt": "2026-10-16T21:39:31Z",
+ "source": "Rail Data Marketplace (Darwin LDBWS)",
+ "boards": {
+  "HIB-LBG": {
+   "from": "HIB",
+   "to": "LBG",
+   "ok": true,
+   "generatedAt": "2026-10-16T22:39:32.1228685+01:00",
+   "messages": [
+    "The ticket office is currently closed at this station."
+   ],
+   "trains": [
+    {
+     "std": "22:43",
+     "etd": "On time",
+     "platform": "1",
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:23",
+     "eta": "On time"
+    },
+    {
+     "std": "23:09",
+     "etd": "On time",
+     "platform": "1",
+     "dest": "London Charing Cross",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:53",
+     "eta": "On time"
+    }
+   ]
+  },
+  "LBG-HIB": {
+   "from": "LBG",
+   "to": "HIB",
+   "ok": true,
+   "generatedAt": "2026-10-16T22:39:32.3728364+01:00",
+   "messages": [],
+   "trains": [
+    {
+     "std": "22:54",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Hastings",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "23:35",
+     "eta": "On time"
+    },
+    {
+     "std": "23:24",
+     "etd": "On time",
+     "platform": "6",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "00:07",
+     "eta": "On time"
+    },
+    {
+     "std": "23:54",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Hastings",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "00:40",
+     "eta": "On time"
+    },
+    {
+     "std": "00:24",
+     "etd": "On time",
+     "platform": null,
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "01:21",
+     "eta": "On time"
+    }
+   ]
+  }
+ }
+}
