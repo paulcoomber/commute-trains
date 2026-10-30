@@ -1,0 +1,24 @@
+{
+ "fetchedAt": "2026-10-30T23:17:21Z",
+ "source": "Rail Data Marketplace (Darwin LDBWS)",
+ "boards": {
+  "HIB-LBG": {
+   "from": "HIB",
+   "to": "LBG",
+   "ok": true,
+   "generatedAt": "2026-10-30T23:17:21.5174384+00:00",
+   "messages": [
+    "Replacement buses towards Tonbridge use the bus stop on North Farm Road opposite the station. Replacement buses towards Tunbridge Wells use the replacement bus stop on North Farm Road outside the station."
+   ],
+   "trains": []
+  },
+  "LBG-HIB": {
+   "from": "LBG",
+   "to": "HIB",
+   "ok": true,
+   "generatedAt": "2026-10-30T23:17:21.7366807+00:00",
+   "messages": [],
+   "trains": []
+  }
+ }
+}
