@@ -1,0 +1,58 @@
+{
+ "fetchedAt": "2026-11-27T23:12:34Z",
+ "source": "Rail Data Marketplace (Darwin LDBWS)",
+ "boards": {
+  "HIB-LBG": {
+   "from": "HIB",
+   "to": "LBG",
+   "ok": true,
+   "generatedAt": "2026-11-27T23:12:34.3094157+00:00",
+   "messages": [],
+   "trains": []
+  },
+  "LBG-HIB": {
+   "from": "LBG",
+   "to": "HIB",
+   "ok": true,
+   "generatedAt": "2026-11-27T23:12:34.5703587+00:00",
+   "messages": [
+    "Industrial action is impacting the level of service on the London Underground. If you are making a journey that involves the London Underground you should plan ahead, check before you travel, and allow more time to complete your journey. More details can be found in the Disruptions area of the National Rail website ."
+   ],
+   "trains": [
+    {
+     "std": "23:24",
+     "etd": "On time",
+     "platform": "6",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "00:07",
+     "eta": "On time"
+    },
+    {
+     "std": "23:54",
+     "etd": "On time",
+     "platform": "7",
+     "dest": "Hastings",
+     "coaches": null,
+     "cancelled": false,
+     "reason": null,
+     "arr": "00:40",
+     "eta": "On time"
+    },
+    {
+     "std": "00:24",
+     "etd": "On time",
+     "platform": "6",
+     "dest": "Tunbridge Wells",
+     "coaches": 8,
+     "cancelled": false,
+     "reason": null,
+     "arr": "01:21",
+     "eta": "On time"
+    }
+   ]
+  }
+ }
+}
